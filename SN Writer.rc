@@ -1,0 +1,679 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE MOVEABLE PURE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\SN Writer.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_FAIL         BITMAP  MOVEABLE PURE   "res\\FAIL.bmp"
+IDB_BITMAP_PASS         BITMAP  MOVEABLE PURE   "res\\PASS.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_SN_MENU MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "FP Auth file",                IDR_FP_AUTH_FILE
+        MENUITEM "SP Auth file",                IDR_SP_AUTH_FILE
+    END
+    POPUP "Option"
+    BEGIN
+        MENUITEM "Already in Meta Mode",        IDR_OPTION_ALREADYINMETA
+        POPUP "Operate Mode"
+        BEGIN
+            MENUITEM "Meta Mode",                   IDR_META_MODE
+            MENUITEM "AT Mode",                     IDR_ATCMD_MODE
+        END
+        MENUITEM "SwitchTool",                  IDR_OPTION_SWITCHTOOL
+        MENUITEM "External Modem",              IDR_OPTION_EXTMODEM
+        MENUITEM "Security USB",                IDR_OPTION_SECURITY_USB
+        MENUITEM "Usb without battery",         IDR_OPTION_USB_WITHOUT_BATTERY
+
+        POPUP "Check Cal_FT Flag"
+        BEGIN
+            MENUITEM "Check Calibration Flag",      IDR_OPTION_CHECK_CAL_FLAG
+
+            MENUITEM "Check FinalTest Flag",        IDR_OPTION_CHECK_FT_FLAG
+        END
+        MENUITEM "Skip Write ProdInfo",         IDR_OPTION_SKIP_WRITE_PRODINFO
+
+        MENUITEM "Composite Device",            IDR_OPTION_COMPOSITE_DEVICE
+        MENUITEM "Backup NV to PC",             IDR_BACKNV_TOPC
+        MENUITEM "Fastboot Oem Lock",           IDR_OEM_LOCK
+    END
+    POPUP "Hdcp_DRMKey"
+    BEGIN
+        MENUITEM "8389+8193Hdcp Key ",          IDR_OPTION_HDCP
+        MENUITEM "MTK HDCP_DRM Key",            IDR_OPTION_DRMKEY
+        MENUITEM "Vendor Install Hdcp Data",    IDR_OPTION_HDCPDATA
+    END
+    POPUP "Identify"
+    BEGIN
+        POPUP "Engineer"
+        BEGIN
+            MENUITEM "Switch to Operator",          IDR_ENG_TO_OPERATER
+            MENUITEM "Change Passwd",               IDR_CHANGE_PASSWD
+            MENUITEM "Enable AutoGen",              IDR_ENABLE_AUTOGEN
+            MENUITEM "Enable Check BtWifi",         IDR_CHECK_BTWIFI
+        END
+        POPUP "Operator"
+        BEGIN
+            MENUITEM "Switch To Engineer",          IDR_OPERATOR_TO_ENG
+        END
+    END
+    POPUP "Help"
+    BEGIN
+        MENUITEM "About SN",                    IDR_ABOUT_SN
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_SYSTEM_CONFIG_DIALOG DIALOGEX 0, 0, 285, 352
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "System Config"
+FONT 4, "System", 0, 0, 0x1
+BEGIN
+    GROUPBOX        "Write Option",IDC_STATIC,8,3,100,128
+    CONTROL         "Barcode",IDC_WRITE_BARC_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,12,88,8
+    CONTROL         "IMEI",IDC_WRITE_IMEI_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,24,88,8
+    CONTROL         "BT Address",IDC_WRITE_BT_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,36,88,8
+    CONTROL         "Wifi Address",IDC_WRITE_WIFI_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,48,88,8
+    CONTROL         "Ethernet Mac Address",IDC_WRITE_ETHERNET_MAC_CHECK,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,13,60,88,8
+    CONTROL         "DRMkey MCID",IDC_WRITE_DRMKEY_MCID_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,72,88,8
+    CONTROL         "MEID",IDC_WRITE_MEID_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,84,88,8
+    CONTROL         "ESN",IDC_WRITE_ESN_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,13,96,88,8
+    CONTROL         "Serial No.",IDC_WRITE_SERIAL_NO_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,108,88,8
+    GROUPBOX        "IMEI Option",IDC_STATIC,7,134,100,102
+    CONTROL         "IMEI CheckSum",IDC_IMEI_CHECKSUM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,142,88,11
+    CONTROL         "IMEI Lock",IDC_IMEI_LOCK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,153,88,11
+    CONTROL         "Dual IMEI",IDC_DUAL_IMEI,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,164,88,11
+    CONTROL         "DualIMEI Same",IDC_DUAL_IMEI_SAME,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,29,175,65,11
+    CONTROL         "Three IMEI",IDC_THREE_IMEI,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,186,88,11
+    CONTROL         "Four IMEI",IDC_FOUR_IMEI,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,197,88,11
+    CONTROL         "CurTemperature",IDC_CURRENT_TEMPERATURE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,210,63,11
+    EDITTEXT        IDC_TEMPERATURE,33,222,19,12,ES_AUTOHSCROLL
+    LTEXT           "°C",IDC_STATIC,56,223,19,8
+    GROUPBOX        "Header Option",IDC_STATIC,110,3,166,233
+    LTEXT           "Barc Header:",IDC_STATIC,115,20,55,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_BARC_HEADER_STR,178,18,50,12,ES_AUTOHSCROLL
+    CONTROL         "On/Off",IDC_BARC_HEADER_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,237,20,32,8
+    LTEXT           "BT Header:",IDC_STATIC,115,38,55,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_BT_HEADER_STR,178,36,50,12,ES_AUTOHSCROLL
+    CONTROL         "On/Off",IDC_BT_HEADER_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,237,38,32,8
+    LTEXT           "Wifi Header:",IDC_STATIC,115,56,55,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_WIFI_HEADER_STR,178,54,50,12,ES_AUTOHSCROLL
+    CONTROL         "On/Off",IDC_WIFI_HEADER_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,237,56,32,8
+    LTEXT           "IMEI_1 Header:",IDC_STATIC,115,74,55,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_IMEI_1_HEADER_STR,178,72,50,12,ES_AUTOHSCROLL
+    CONTROL         "On/Off",IDC_IMEI_1_HEADER_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,237,74,32,8
+    LTEXT           "IMEI_2 Header:",IDC_STATIC,115,92,55,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_IMEI_2_HEADER_STR,178,90,50,12,ES_AUTOHSCROLL
+    CONTROL         "On/Off",IDC_IMEI_2_HEADER_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,237,92,32,8
+    LTEXT           "IMEI_3 Header:",IDC_STATIC,115,110,55,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_IMEI_3_HEADER_STR,178,108,50,12,ES_AUTOHSCROLL
+    CONTROL         "On/Off",IDC_IMEI_3_HEADER_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,237,110,32,8
+    LTEXT           "IMEI_4 Header:",IDC_STATIC,115,128,55,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_IMEI_4_HEADER_STR,178,126,50,12,ES_AUTOHSCROLL
+    CONTROL         "On/Off",IDC_IMEI_4_HEADER_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,237,128,32,8
+    LTEXT           "Serial Header:",IDC_STATIC,115,146,55,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_SERIAL_NO_HEADER_STR,178,144,50,12,ES_AUTOHSCROLL
+    CONTROL         "On/Off",IDC_SERIAL_NO_HEADER_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,237,146,32,8
+    LTEXT           "Ethernet Header:",IDC_STATIC,115,164,55,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_ETHERNET_HEADER_STR,178,162,50,12,ES_AUTOHSCROLL
+    CONTROL         "On/Off",IDC_ETHERNET_HEADER_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,237,164,32,8
+    LTEXT           "MCID Header:",IDC_STATIC,115,182,55,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_DRMKEY_MCID_HEADER_STR,178,180,50,12,ES_AUTOHSCROLL
+    CONTROL         "On/Off",IDC_DRMKEY_MCID_HEADER_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,237,182,32,8
+    LTEXT           "MEID:",IDC_STATIC,115,200,55,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_MEID_HEADER_STR,178,198,50,12,ES_AUTOHSCROLL
+    CONTROL         "On/Off",IDC_MEID_HEADER_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,237,200,32,8
+    LTEXT           "MSN:",IDC_STATIC,115,218,55,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_ESN_HEADER_STR,178,216,50,12,ES_AUTOHSCROLL
+    CONTROL         "On/Off",IDC_ESN_HEADER_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,237,218,32,8
+    GROUPBOX        "DataBase File",IDC_STATIC,7,239,269,60
+    CONTROL         "Load Modem DB from DUT",IDC_DB_FROM_DUT_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,173,238,103,10
+    EDITTEXT        IDC_MD_1_DBFILE_PATH,12,252,225,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "MD1_DB",IDC_BTN_MD1,240,252,32,12
+    EDITTEXT        IDC_MD_2_DBFILE_PATH,12,268,225,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "MD2_DB",IDC_BTN_MD2,240,268,32,12
+    EDITTEXT        IDC_AP_DBFILE_PATH,12,283,225,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "AP_DB",IDC_BTN_AP,240,283,32,12
+    LTEXT           "Log Dir",IDC_STATIC,7,308,29,8
+    EDITTEXT        IDC_LOG_DIR,36,307,226,12,ES_AUTOHSCROLL | ES_READONLY
+    PUSHBUTTON      "...",IDC_BTN_LOG,262,307,14,12
+    PUSHBUTTON      "Save",IDC_BTN_SAVE,72,328,140,18
+END
+
+IDD_ENCRYPTION_DIALOG DIALOG DISCARDABLE  0, 0, 287, 111
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Please input password:"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,171,80,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,43,80,50,14
+    LTEXT           "Password:",IDC_PWD_STATIC,26,21,41,16
+    EDITTEXT        IDC_PWD_DATA,74,20,153,19,ES_AUTOHSCROLL
+    LTEXT           "......",IDC_PWD_MSG,7,50,273,23
+END
+
+IDD_SNWRITER_DIALOG DIALOGEX 0, 0, 335, 231
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | 
+    WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "SN Writer"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    LTEXT           "ComPort:",IDC_STATIC,13,22,43,9,0,WS_EX_RIGHT
+    EDITTEXT        IDC_COUNT_TOTAL,213,18,100,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "System Config",IDC_BTN_SYSCONFIG,13,83,135,18
+    DEFPUSHBUTTON   "Start",IDC_BTN_START,244,123,80,35
+    PUSHBUTTON      "Quit",IDC_BTN_QUIT,9,123,80,35
+    EDITTEXT        IDC_COUNT_PASS,213,51,100,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_COUNT_FAIL,213,86,100,13,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "Target Type:",IDC_STATIC,13,54,43,9,0,WS_EX_RIGHT
+    LTEXT           "Total:",IDC_STATIC,184,21,27,10
+    LTEXT           "Pass:",IDC_STATIC_PASS,184,54,27,10
+    CONTROL         "Progress1",IDC_PROGRESS_SN,"msctls_progress32",
+                    WS_BORDER,9,171,315,10
+    GROUPBOX        "",IDC_STATIC,177,7,147,98
+    LTEXT           "Fail:",IDC_STATIC,184,89,27,10
+    GROUPBOX        "",IDC_STATIC,9,7,147,98
+    COMBOBOX        IDC_COMBO_COMPORT,61,19,87,51,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_TARGET_TYPE,61,51,87,63,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "...",IDC_OPERATE_INFO,9,185,225,35
+    PUSHBUTTON      "Button1",IDC_BTN_INDITE,123,123,87,35,BS_BITMAP
+    CONTROL         "°C",IDC_MAINUI_TEMP2,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,298,185,35,35
+    CONTROL         "temp",IDC_MAINUI_TEMP1,"Static",SS_LEFTNOWORDWRAP | 
+                    WS_GROUP,239,185,56,35,WS_EX_RIGHT
+END
+
+IDD_SCANDATA_DIALOG DIALOGEX 0, 0, 236, 316
+STYLE DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Scan Data"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    LTEXT           "Data:",IDC_STATIC,46,3,66,8
+    LTEXT           "Header:",IDC_STATIC,195,3,34,8
+    LTEXT           "Barcode:",IDC_BARC_STATIC,9,20,32,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_BARCODE_DATA,46,18,143,12,ES_AUTOHSCROLL
+    LTEXT           "Barcode",IDC_BARC_HEADER_SCAN,195,19,34,10
+    LTEXT           "IMEI_1:",IDC_IMEI_1_STATIC,9,40,32,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_IMEI_1_DATA,46,38,143,12,ES_AUTOHSCROLL
+    LTEXT           "Imei_1",IDC_IMEI_1_HEADER_SCAN,195,39,34,10
+    LTEXT           "IMEI_2:",IDC_IMEI_2_STATIC,9,60,32,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_IMEI_2_DATA,46,58,143,12,ES_AUTOHSCROLL
+    LTEXT           "Imei_2",IDC_IMEI_2_HEADER_SCAN,195,59,34,10
+    LTEXT           "IMEI_3:",IDC_IMEI_3_STATIC,9,80,32,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_IMEI_3_DATA,46,78,143,12,ES_AUTOHSCROLL
+    LTEXT           "Imei_3",IDC_IMEI_3_HEADER_SCAN,195,79,34,10
+    LTEXT           "IMEI_4:",IDC_IMEI_4_STATIC,9,100,32,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_IMEI_4_DATA,46,98,143,12,ES_AUTOHSCROLL
+    LTEXT           "Imei_4",IDC_IMEI_4_HEADER_SCAN,195,99,34,10
+    LTEXT           "SerialNo.:",IDC_SERIAL_NO_STATIC,9,120,32,8,0,
+                    WS_EX_RIGHT
+    EDITTEXT        IDC_SERIAL_NO_DATA,46,118,143,12,ES_AUTOHSCROLL
+    LTEXT           "SerialNo",IDC_SERIAL_NO_HEADER_SCAN,195,119,34,10
+    LTEXT           "BT Addr:",IDC_BT_STATIC,9,140,32,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_BT_DATA,46,138,143,12,ES_AUTOHSCROLL
+    LTEXT           "BT",IDC_BT_HEADER_SCAN,195,139,34,10
+    LTEXT           "Wifi Addr:",IDC_WIFI_STATIC,9,160,32,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_WIFI_DATA,46,158,143,12,ES_AUTOHSCROLL
+    LTEXT           "Wifi",IDC_WIFI_HEADER_SCAN,195,159,34,10
+    LTEXT           "Ethernet:",IDC_ETHERNET_STATIC,9,180,32,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_ETHERNET_MAC_DATA,46,178,143,12,ES_AUTOHSCROLL
+    LTEXT           "Ethernet",IDC_ETHERNET_HEADER_SCAN,195,179,34,10
+    LTEXT           "MCID:",IDC_MCID_STATIC,9,201,32,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_DRMKEY_MCID_DATA,46,199,143,12,ES_AUTOHSCROLL
+    LTEXT           "MCID",IDC_DRMKEY_MCID_HEADER_SCAN,195,200,34,10
+    LTEXT           "MEID:",IDC_MEID_STATIC,9,221,32,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_MEID_DATA,46,219,143,12,ES_AUTOHSCROLL
+    LTEXT           "MEID",IDC_MEID_HEADER_SCAN,195,220,34,10
+    LTEXT           "ESN:",IDC_ESN_STATIC,8,242,32,8,0,WS_EX_RIGHT
+    EDITTEXT        IDC_ESN_DATA,46,240,143,12,ES_AUTOHSCROLL
+    LTEXT           "ESN",IDC_ESN_HEADER_SCAN,195,241,34,10
+    LTEXT           "...",IDC_SCAN_MSG,7,261,222,21
+    PUSHBUTTON      "Cancel",IDC_BTN_SCAN_CANCEL,36,287,48,22
+    DEFPUSHBUTTON   "OK",IDC_BTN_SCAN_OK,146,286,48,22
+END
+
+IDD_ABOUTSN_DIALOG DIALOG DISCARDABLE  0, 0, 262, 76
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About SN Writer"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,205,7,50,14
+    LTEXT           "SN Writer Tool Version : V2.1408.04",IDC_SN_VERSION,42,
+                    10,162,8
+    LTEXT           "Meta DLL 1340.01",IDC_METADLL_VERSION,42,27,104,8
+    LTEXT           "SPMeta DLL 1345.01",IDC_SPMETADLL_VERSION,42,40,104,8
+    LTEXT           "Copyright(C) 2004-2010 MediaTek Inc. All rights reserved.",
+                    IDC_STATIC,42,58,170,8
+    ICON            IDR_MAINFRAME,IDC_STATIC,13,12,20,20
+END
+
+IDD_IDENTIFY_VERIFY_DIALOG DIALOG DISCARDABLE  0, 0, 187, 61
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Verify Passwd"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",ID_BTN_VERIFY_OK,123,35,50,14
+    PUSHBUTTON      "Cancel",ID_BTN_VERIFY_CANCEL,14,35,50,14
+    LTEXT           "Passwd:",IDC_STATIC,9,14,29,8
+    EDITTEXT        IDC_EDIT_VERIFY_PASSWD,43,12,137,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+END
+
+IDD_CHANGE_PASSWD_DIALOG DIALOGEX 0, 0, 210, 85
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Change Passwd"
+FONT 10, "System", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",ID_CHG_PASSWD_OK,151,67,50,14
+    PUSHBUTTON      "Cancel",ID_CHG_PASSWD_CANCEL,60,67,50,14
+    LTEXT           "Old passwd:",IDC_STATIC,13,9,45,10,0,WS_EX_RIGHT
+    LTEXT           "New passwd:",IDC_STATIC,13,29,45,10,0,WS_EX_RIGHT
+    LTEXT           "Confirm Passwd:",IDC_STATIC,0,49,58,10,0,WS_EX_RIGHT
+    EDITTEXT        IDC_EDIT_OLD_PASSWD,60,7,141,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_NEW_PASSWD,60,27,141,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_CONFIRM_PASSWD,60,47,141,12,ES_PASSWORD | 
+                    ES_AUTOHSCROLL
+END
+
+IDD_FILE_LOAD_DIALOG DIALOG DISCARDABLE  0, 0, 345, 171
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "File Select"
+FONT 10, "System"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDC_BTN_FILE_SEL_OK,217,139,61,23
+    PUSHBUTTON      "Cancel",IDC_BTN_FILE_SEL_CANCEL,55,139,61,23
+    EDITTEXT        IDC_FP_AUTH_FIEL_PATH,7,12,270,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_SP_AUTH_FIEL_PATH,7,33,270,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_DRMKEY_FIEL_PATH,7,75,270,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_HDCP_BIN_FIEL_PATH,7,54,270,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_HDCP_DATA_FIEL_PATH,7,96,270,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    EDITTEXT        IDC_HDCP_CEK_FIEL_PATH,7,117,270,12,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    PUSHBUTTON      "FPAuth_file",IDC_BTN_SEL_FP_AUTH_FILE,283,13,54,12
+    PUSHBUTTON      "SPAuth_file",IDC_BTN_SEL_SP_AUTH_FILE,283,34,54,12
+    PUSHBUTTON      "HdcpKey_File",IDC_BTN_SEL_HDCP_BIN_FILE,283,55,54,12
+    PUSHBUTTON      "HdcpData_File",IDC_BTN_SEL_HDCP_DATAFILE,283,96,54,12
+    PUSHBUTTON      "HdcpCek_File",IDC_BTN_SEL_HDCP_CEK_FILE,283,118,54,12
+    PUSHBUTTON      "DRMKey_File",IDC_BTN_SEL_DRMKEY_FILE,283,76,54,12
+END
+
+IDD_AUTOGEN_DIALOG DIALOG DISCARDABLE  0, 0, 331, 373
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "AutoGen Config"
+FONT 10, "System"
+BEGIN
+    CONTROL         "Barcode",IDC_AUTOGEN_BARC_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,17,20,36,8
+    CONTROL         "IMEI",IDC_AUTOGEN_IMEI_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,64,20,36,8
+    CONTROL         "Wifi",IDC_AUTOGEN_WIFI_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,158,20,36,8
+    CONTROL         "BT",IDC_AUTOGEN_BT_CHECK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,111,20,36,8
+    EDITTEXT        IDC_BARC_START_STR,43,50,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BARC_END_STR,43,72,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BARC_NEXT_STR,43,94,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_IMEI_START_STR,203,55,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_IMEI_END_STR,203,76,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_IMEI_NEXT_STR,203,97,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BT_START_STR,43,158,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BT_END_STR,43,179,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_BT_NEXT_STR,43,200,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WIFI_START_STR,203,158,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WIFI_END_STR,203,179,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_WIFI_NEXT_STR,203,200,110,12,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDC_BTN_AUTOGEN_OK,173,338,118,19
+    PUSHBUTTON      "Cancel",IDC_BTN_AUTOGEN_CANCEL,39,338,118,19
+    GROUPBOX        "Barcode",IDC_STATIC,12,40,145,101
+    GROUPBOX        "Enable AutoGen",IDC_STATIC,12,7,306,30
+    GROUPBOX        "IMEI",IDC_STATIC,173,40,145,101
+    GROUPBOX        "Wifi Address",IDC_STATIC,173,147,145,91
+    GROUPBOX        "BT Address",IDC_STATIC,12,147,145,91
+    LTEXT           "Start:",IDC_STATIC,17,52,22,8
+    LTEXT           "End:",IDC_STATIC,17,75,22,8
+    LTEXT           "Next:",IDC_STATIC,17,98,22,8
+    LTEXT           "Step:",IDC_STATIC,17,121,22,8
+    COMBOBOX        IDC_BARC_AUTOGEN_STEP,43,116,23,31,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Start:",IDC_STATIC,179,56,22,8
+    LTEXT           "End:",IDC_STATIC,179,78,22,8
+    LTEXT           "Next:",IDC_STATIC,179,99,22,8
+    LTEXT           "Step:",IDC_STATIC,179,121,22,8
+    COMBOBOX        IDC_IMEI_AUTOGEN_STEP,203,117,23,30,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Start:",IDC_STATIC,17,160,22,8
+    LTEXT           "End:",IDC_STATIC,17,182,22,8
+    LTEXT           "Next:",IDC_STATIC,17,203,22,8
+    LTEXT           "Step:",IDC_STATIC,17,225,22,8
+    COMBOBOX        IDC_BT_AUTOGEN_STEP,43,221,23,31,CBS_DROPDOWN | CBS_SORT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Start:",IDC_STATIC,179,160,22,8
+    LTEXT           "End:",IDC_STATIC,179,182,22,8
+    LTEXT           "Next:",IDC_STATIC,179,203,22,8
+    LTEXT           "Step:",IDC_STATIC,179,225,22,8
+    COMBOBOX        IDC_WIFI_AUTOGEN_STEP,203,221,23,32,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_ETHERNET_START_STR,43,254,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ETHERNET_END_STR,43,275,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_ETHERNET_NEXT_STR,43,296,110,12,ES_AUTOHSCROLL
+    GROUPBOX        "Ethernet Mac Address",IDC_STATIC,12,243,145,91
+    LTEXT           "Start:",IDC_STATIC,17,256,22,8
+    LTEXT           "End:",IDC_STATIC,17,278,22,8
+    LTEXT           "Next:",IDC_STATIC,17,299,22,8
+    LTEXT           "Step:",IDC_STATIC,17,321,22,8
+    COMBOBOX        IDC_ETHERNET_AUTOGEN_STEP,43,317,23,31,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Ethernet",IDC_AUTOGEN_ETHERNET_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,205,20,40,8
+    EDITTEXT        IDC_DRMKEY_MCID_START_STR,203,254,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DRMKEY_MCID_END_STR,203,275,110,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DRMKEY_MCID_NEXT_STR,203,296,110,12,ES_AUTOHSCROLL
+    GROUPBOX        "DRMKey MCID",IDC_STATIC,173,243,145,91
+    LTEXT           "Start:",IDC_STATIC,179,256,22,8
+    LTEXT           "End:",IDC_STATIC,179,278,22,8
+    LTEXT           "Next:",IDC_STATIC,179,299,22,8
+    LTEXT           "Step:",IDC_STATIC,179,321,22,8
+    COMBOBOX        IDC_DRMKEY_MCID_AUTOGEN_STEP,203,317,23,31,CBS_DROPDOWN | 
+                    CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "DRMKey MCID",IDC_AUTOGEN_DRMKEY_MCID_CHECK,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,256,20,59,8
+    CONTROL         "Denary",IDC_DENARY_INCREASE,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,94,117,59,8
+    CONTROL         "Hexadecimal",IDC_HEX_INCREASE,"Button",
+                    BS_AUTORADIOBUTTON,94,130,59,8
+    GROUPBOX        "Increase radix",IDC_STATIC,91,106,66,35
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO MOVEABLE PURE 
+BEGIN
+    IDD_SYSTEM_CONFIG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 276
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 346
+    END
+
+    IDD_ENCRYPTION_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 280
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 104
+    END
+
+    IDD_SNWRITER_DIALOG, DIALOG
+    BEGIN
+        TOPMARGIN, 7
+    END
+
+    IDD_SCANDATA_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 310
+    END
+
+    IDD_ABOUTSN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 69
+    END
+
+    IDD_IDENTIFY_VERIFY_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_CHANGE_PASSWD_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 203
+        BOTTOMMARGIN, 81
+    END
+
+    IDD_FILE_LOAD_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 338
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 164
+    END
+
+    IDD_AUTOGEN_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 324
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 366
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1716,0,0
+ PRODUCTVERSION 1,1716,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "MediaTek\0"
+            VALUE "FileDescription", "SN Writer\0"
+            VALUE "FileVersion", "1, 1716, 0, 0\0"
+            VALUE "InternalName", "SN Writer\0"
+            VALUE "LegalCopyright", "Copyright (C) 2016\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "SN Writer.exe\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "SN Writer\0"
+            VALUE "ProductVersion", "1, 1716, 0, 0\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// HTML
+//
+
+1                       HTML    DISCARDABLE     "res\\manifest.xml"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About SN Writer..."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#endif //_WIN32
+#include "afxres.rc"         // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
